@@ -1,0 +1,30 @@
+{
+  "name": "shuri",
+  "version": "0.0.0",
+  "description": "Tools for building awesome tools",
+  "repository": "https://github.com/jamiebuilds/shuri",
+  "author": "Jamie Kyle <me@thejameskyle.com>",
+  "license": "MIT",
+  "bolt": {
+    "workspaces": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "dependencies": {
+    "find-up": "^2.1.0",
+    "js-yaml": "^3.10.0",
+    "json5": "^0.5.1",
+    "parse-json": "^4.0.0",
+    "read-pkg": "^3.0.0",
+    "toml": "^2.3.3",
+    "util.promisify": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "fixturez": "^1.1.0",
+    "flow-bin": "^0.66.0"
+  }
+}
