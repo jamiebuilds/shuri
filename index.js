@@ -80,7 +80,7 @@ type LoadConfigFileOptions = {
 };
 */
 
-function loadConfig(filePath /*: string */, opts /*: LoadConfigFileOptions */) {
+function loadConfig(filePath /*: string */, opts /*: LoadConfigFileOptions */ = {}) {
   let { defaultExt, useJSON5, pkgField } = Object.assign({}, {
     defaultExt: 'json',
     useJSON5: true,
@@ -89,8 +89,8 @@ function loadConfig(filePath /*: string */, opts /*: LoadConfigFileOptions */) {
   let ext = path.extname(filePath);
   let basename = path.basename(filePath);
 
-  if (ext === '' && defaultExtension) {
-    ext = defaultExtension;
+  if (ext === '' && defaultExt) {
+    ext = defaultExt;
   }
 
   return readFile(filePath).then(fileContents => {
