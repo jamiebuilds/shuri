@@ -5,11 +5,7 @@
   "repository": "https://github.com/jamiebuilds/shuri",
   "author": "Jamie Kyle <me@thejameskyle.com>",
   "license": "MIT",
-  "bolt": {
-    "workspaces": [
-      "packages/*"
-    ]
-  },
+  "main": "index.js",
   "scripts": {
     "test": "ava"
   },
