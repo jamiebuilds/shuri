@@ -19,11 +19,11 @@ const defaultConfig = { /* ... */ };
 
 async function main() {
   let cwd = process.cwd();
-  let configFile = shuri.findConfig(cwd, { configName, pkgField });
+  let configFile = await shuri.findConfig(cwd, { configName, pkgField });
   let config;
 
   if (configFile !== null) {
-    config = shuri.loadConfig(configFile, { pkgField });
+    config = await shuri.loadConfig(configFile, { pkgField });
   } else {
     config = defaultConfig;
   }
