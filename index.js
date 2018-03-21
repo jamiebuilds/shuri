@@ -82,7 +82,7 @@ type LoadConfigFileOptions = {
 
 function loadConfig(filePath /*: string */, opts /*: LoadConfigFileOptions */ = {}) {
   let { defaultExt, useJSON5, pkgField } = Object.assign({}, {
-    defaultExt: 'json',
+    defaultExt: '.json',
     useJSON5: true,
   }, opts);
 
